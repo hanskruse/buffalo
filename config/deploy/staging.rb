@@ -6,7 +6,6 @@ set :deploy_to, "/var/www/buffalo"
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-# Don't declare `role :all`, it's a meta role
 role :app, %w{oxid@192.168.171.130}
 role :web, %w{oxid@192.168.171.130}
 role :db,  %w{oxid@192.168.171.130}
@@ -40,3 +39,5 @@ server '192.168.171.130', user: 'oxid', roles: %w{web app}, my_property: :my_val
 #     # password: 'please use keys'
 #   }
 # setting per server overrides global ssh_options
+
+# fetch(:default_env).merge!(rails_env: :staging)
