@@ -1,3 +1,6 @@
+set :stage, :staging
+set :deploy_to, "/var/www/buffalo"
+
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary
